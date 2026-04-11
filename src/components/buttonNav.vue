@@ -1,0 +1,41 @@
+<script setup>
+const props = defineProps({
+    title:{
+        type:String,
+        default: ""
+    }
+})
+
+</script>
+<template>
+    <button class="button">
+        {{ title }}
+    </button>
+</template>
+
+<style scoped>/* From Uiverse.io by pipic1 */ 
+.button {
+  --key-text-color: #969faf;
+  --docsearch-key-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff,
+    0 1px 2px 1px rgba(30, 35, 90, 0.4);
+  --docsearch-key-gradient: linear-gradient(-225deg, #d5dbe4, #f8f8f8);
+  border: none;
+  background: var(--docsearch-key-gradient);
+  border-radius: 3px;
+  box-shadow: var(--docsearch-key-shadow);
+  color: var(--key-text-color);
+  cursor: pointer;
+  height: 2.0em;
+  text-align: center;
+  padding: 0.6em;
+  margin: 0 0.6em;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  min-width: 1em;
+  line-height: 0.9em;
+  user-select: none;
+}
+
+</style>

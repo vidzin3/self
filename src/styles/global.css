@@ -1,0 +1,8 @@
+.background-template{
+    background-color: #EBF1FF;
+}
+
+body{
+    font-family: "MixedFont" !important;
+    font-size: clamp(12px,1vw,15px);
+}

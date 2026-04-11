@@ -1,0 +1,16 @@
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  background-repeat: no-repeat;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body{
+    padding: 0 auto;
+    margin: 0 auto;
+    min-block-size: 100%;
+}
