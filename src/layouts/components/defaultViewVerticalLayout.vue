@@ -10,7 +10,7 @@ import Footer from './footer.vue';
             <RouterView></RouterView>
         </main>
 
-        <Footer />
+        <!-- <Footer /> -->
     </div>
 </template>
 
@@ -19,8 +19,6 @@ import Footer from './footer.vue';
     margin: 0 auto;
     width: 65%;
     height: 100%;
-    margin-bottom: 50px
-
 }
 
 /* 1000px or down */
