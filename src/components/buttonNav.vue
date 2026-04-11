@@ -31,6 +31,7 @@ const props = defineProps({
   margin: 0 0.6em;
   display: inline-block;
   text-transform: uppercase;
+  font-family: "MixedFont";
   font-weight: bold;
   font-size: 1em;
   min-width: 1em;

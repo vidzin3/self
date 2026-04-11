@@ -23,180 +23,185 @@ const socialMediaTags = ref([
     title: "Facebook",
     rounded: "md",
     icon: "mdi:facebook",
+    link: "https://www.facebook.com/share/1CP32JoopR/",
   },
   {
     title: "Twitter",
     rounded: "md",
     icon: "mdi:twitter",
+    link:"https://x.com/Davidmoner5"
   },
   {
     title: "LinkedIn",
     rounded: "md",
     icon: "mdi:linkedin",
+    link:"https://www.linkedin.com/in/kouch-david-944873355?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   },
   {
     title: "Github",
     rounded: "md",
     icon: "mdi:github",
+    link: "https://github.com/vidzin3",
   },
 ]);
 
 const techStacks = ref([
   {
     title: "FrontEnd",
-    icon: "mdi:code-array",
-    stacks:[
+    icon: "mdi:code-tags",
+    stacks: [
       {
-        title:"html",
-        icon:"mdi:language-html5",
-        color:""
+        title: "html",
+        icon: "mdi:language-html5",
+        color: "",
       },
       {
-        title:"css",
-        icon:"mdi:language-css3",
-        color:""
+        title: "css",
+        icon: "mdi:language-css3",
+        color: "",
       },
       {
-        title:"javascript",
-        icon:"mdi:language-javascript",
-        color:""
+        title: "javascript",
+        icon: "mdi:language-javascript",
+        color: "",
       },
       {
-        title:"tailwind",
-        icon:"mdi:tailwind",
-        color:""
+        title: "tailwind",
+        icon: "mdi:tailwind",
+        color: "",
       },
       {
-        title:"vuetify",
-        icon:"mdi:vuetify",
-        color:""
+        title: "vuetify",
+        icon: "mdi:vuetify",
+        color: "",
       },
       {
-        title:"vue js",
-        icon:"mdi:vuejs",
-        color:""
+        title: "vue js",
+        icon: "mdi:vuejs",
+        color: "",
       },
       {
-        title:"axios",
-        icon:"",
-        color:""
+        title: "axios",
+        icon: "",
+        color: "",
       },
-    ]
+    ],
   },
   {
     title: "BackEnd",
     icon: "mdi:database-sync",
-    stacks:[
+    stacks: [
       {
-        title:"php",
-        icon:"mdi:language-php",
-        color:""
+        title: "php",
+        icon: "mdi:language-php",
+        color: "",
       },
       {
-        title:"laravel",
-        icon:"mdi:laravel",
-        color:""
+        title: "laravel",
+        icon: "mdi:laravel",
+        color: "",
       },
       {
-        title:"dotnet core web api",
-        icon:"",
-        color:""
+        title: "dotnet core web api",
+        icon: "",
+        color: "",
       },
-    ]
+    ],
   },
   {
     title: "Programming",
     icon: "mdi:code-json",
-    stacks:[
+    stacks: [
       {
-        title:"c++",
-        icon:"mdi:language-cpp",
-        color:""
+        title: "c++",
+        icon: "mdi:language-cpp",
+        color: "",
       },
       {
-        title:"c#",
-        icon:"mdi:language-csharp",
-        color:""
+        title: "c#",
+        icon: "mdi:language-csharp",
+        color: "",
       },
       {
-        title:"java",
-        icon:"mdi:language-java",
-        color:""
+        title: "java",
+        icon: "mdi:language-java",
+        color: "",
       },
-    ]
+    ],
   },
   {
     title: "Database",
     icon: "mdi:database",
-    stacks:[
+    stacks: [
       {
-        title:"mysql",
-        icon:"",
-        color:""
+        title: "mysql",
+        icon: "",
+        color: "",
       },
       {
-        title:"postgresql",
-        icon:"",
-        color:""
+        title: "postgresql",
+        icon: "",
+        color: "",
       },
-    ]
+    ],
   },
   {
     title: "Codebase",
     icon: "mdi:file-code",
-    stacks:[
+    stacks: [
       {
-        title:"github",
-        icon:"mdi:github",
-        color:""
+        title: "github",
+        icon: "mdi:github",
+        color: "",
       },
       {
-        title:"gitlab",
-        icon:"mdi:gitlab",
-        color:""
+        title: "gitlab",
+        icon: "mdi:gitlab",
+        color: "",
       },
       {
-        title:"bitbucket",
-        icon:"mdi:bitbucket",
-        color:""
+        title: "bitbucket",
+        icon: "mdi:bitbucket",
+        color: "",
       },
-    ]
+    ],
   },
   {
     title: "Platform control/Server",
     icon: "mdi:server-network",
-    stacks:[
+    stacks: [
       {
-        title:"ubuntu",
-        icon:"mdi:ubuntu",
-        color:""
+        title: "ubuntu",
+        icon: "mdi:ubuntu",
+        color: "",
       },
       {
-        title:"digital ocean",
-        icon:"mdi:digital-ocean",
-        color:""
+        title: "digital ocean",
+        icon: "mdi:digital-ocean",
+        color: "",
       },
       {
-        title:"apache",
-        icon:"mdi:apache-kafka",
-        color:""
+        title: "apache",
+        icon: "mdi:apache-kafka",
+        color: "",
       },
-    ]
+    ],
   },
-])
+]);
 
 const clickToLink = (link) => {
-  const a = document.createElement('a')
-  a.href = link
-  a.setAttribute('target','blank')
-  document.body.appendChild(a)
-  a.click()
+  if (!link) return false;
+  const a = document.createElement("a");
+  a.href = link;
+  a.setAttribute("target", "blank");
+  document.body.appendChild(a);
+  a.click();
 
-  document.body.removeChild(a)
-}
+  document.body.removeChild(a);
+};
 </script>
 <template>
-  <div style="width: 100%;height: 100%;">
+  <div style="width: 100%; height: 100%">
     <div style="display: flex; flex-wrap: wrap">
       <div
         class="basic-flex"
@@ -204,22 +209,28 @@ const clickToLink = (link) => {
       >
         <div style="font-size: 40px; font-weight: bold">About Me</div>
         <div>
-          Hello, I am <span style="color: #0571f4;">Kouch David</span> and I'm a Full-stack Web Developer with over 3 years of experience
-          building scalable web applications. My journey started with a
-          fascination for how data moves across the internet, leading me to
-          engineering lifecycle.
+          Hello, I am <span style="color: #0571f4">Kouch David</span> and I'm a
+          Full-stack Web Developer with over 3 years of experience building
+          scalable web applications. My journey started with a fascination for
+          how data moves across the internet, leading me to engineering
+          lifecycle.
         </div>
         <div>
           I specialize in bridging the gap between complex backend systems and
           intuitive frontend experiences. I believe that good architecture isn't
           just about code that works, but about creating systems that are
-          maintainable, performant, and delightful for users.APIs are built
-          into every system.
+          maintainable, performant, and delightful for users.APIs are built into
+          every system.
         </div>
         <div>
           When I'm not architecting systems, I contribute to open-source
           projects and mentor junior developers in navigating the ever-evolving
           JavaScript ecosystem.
+        </div>
+        <div>
+          <span style="color: #0571f4">Bachelor's Thesis topic</span>:
+          Development of an administrative management system at the Department
+          of Culture and Fine Arts of Pursat Province <br />(Under development)
         </div>
         <div
           style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap"
@@ -231,7 +242,13 @@ const clickToLink = (link) => {
         <div style="font-size: 40px; font-weight: bold">Social Media</div>
         <div style="display: flex; gap: 10px; flex-wrap: wrap">
           <template v-for="tag in socialMediaTags">
-            <Tag style="cursor: pointer;" :title="tag.title" :rounded="tag.rounded" :icon="tag.icon" @click.prevent="clickToLink('https://www.facebook.com/')"/>
+            <Tag
+              style="cursor: pointer"
+              :title="tag.title"
+              :rounded="tag.rounded"
+              :icon="tag.icon"
+              @click.prevent="clickToLink(tag.link)"
+            />
           </template>
         </div>
       </div>
@@ -241,9 +258,15 @@ const clickToLink = (link) => {
       >
         <div style="font-size: 40px; font-weight: bold">Technical Skills</div>
         <div style="color: #0571f4">Core Stack & Competencies</div>
-        <div style="display: flex;gap: 10px;margin: 10px 0px;flex-wrap: wrap;">
+        <div
+          style="display: flex; gap: 10px; margin: 10px 0px; flex-wrap: wrap"
+        >
           <template v-for="tech in techStacks">
-            <CardTech :title="tech.title" :title-icon="tech.icon" :stacks="tech.stacks" />
+            <CardTech
+              :title="tech.title"
+              :title-icon="tech.icon"
+              :stacks="tech.stacks"
+            />
           </template>
         </div>
       </div>

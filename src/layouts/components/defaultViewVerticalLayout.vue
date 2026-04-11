@@ -24,7 +24,7 @@ import Footer from './footer.vue';
 }
 
 /* 1000px or down */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     #body-page{
         width: 95%;
     };
