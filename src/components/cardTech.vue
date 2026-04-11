@@ -1,4 +1,6 @@
 <script setup>
+import Tag from './tag.vue';
+
 const props = defineProps({
     title:{
         type:String,
@@ -7,6 +9,15 @@ const props = defineProps({
     titleIcon:{
         type:String,
         default: ""
+    },
+    stacks:{
+        type:Array,
+        default:[
+            {
+                title:"",
+                icon:""
+            }
+        ]
     }
 })
 </script>
@@ -14,6 +25,7 @@ const props = defineProps({
     <div
         style="
         padding: 10px;
+        width: 100%;
         box-shadow:
             rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
             rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -29,7 +41,11 @@ const props = defineProps({
             </div>
         </div>
         <div style="margin: 10px 0px">
-            stack
+            <div style="display: flex;flex-wrap: wrap;gap: 7px;">
+                <template v-for="stack in stacks">
+                    <Tag :title="stack.title" rounded="pill" :icon="stack.icon" />
+                </template>
+            </div>
         </div>
     </div>
 </template>

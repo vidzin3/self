@@ -18,12 +18,15 @@ import Footer from './footer.vue';
 #body-page{
     margin: 0 auto;
     width: 65%;
+    height: 100%;
+    margin-bottom: 50px
+
 }
 
 /* 1000px or down */
 @media screen and (max-width: 1000px) {
     #body-page{
-        width: 95%
+        width: 95%;
     };
 }
 </style>
