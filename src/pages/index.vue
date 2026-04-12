@@ -1,4 +1,5 @@
 <script setup>
+import CardExperience from "@/components/cardExperience.vue";
 import CardTech from "@/components/cardTech.vue";
 import Tag from "@/components/tag.vue";
 import { ref } from "vue";
@@ -29,13 +30,13 @@ const socialMediaTags = ref([
     title: "Twitter",
     rounded: "md",
     icon: "mdi:twitter",
-    link:"https://x.com/Davidmoner5"
+    link: "https://x.com/Davidmoner5",
   },
   {
     title: "LinkedIn",
     rounded: "md",
     icon: "mdi:linkedin",
-    link:"https://www.linkedin.com/in/kouch-david-944873355?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+    link: "https://www.linkedin.com/in/kouch-david-944873355?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     title: "Github",
@@ -189,6 +190,55 @@ const techStacks = ref([
   },
 ]);
 
+const experiences = ref([
+  {
+    title: "E-Clinic",
+    timeline: "18/12/2023",
+    description: "Training project",
+    isCompleted: false,
+    chip: "NoFund",
+  },
+  {
+    title: "មន្ទីរពហុព្យាបាល និង សម្ភព សុខភីរម្យ",
+    timeline: "06/01/2024",
+    description: "Team project",
+    isCompleted: false,
+    chip: "late",
+  },
+  {
+    title: "Freelancer",
+    timeline: "01/04/2024",
+    description:
+      "open freelance completed task client or developer couldn't finished.",
+    isCompleted: true,
+    chip: "completed",
+  },
+  {
+    title: "One window service battambang (OWSO)",
+    timeline: "04/09/2024",
+    description:
+      "Volunteer project one window service. Restructuring and fixing failed logical functions. This project is already being used by Battambang Municipality.",
+    isCompleted: true,
+    chip: "completed",
+  },
+  {
+    title: "Department of economic and financial PURSAT",
+    timeline: "01/03/2025",
+    description:
+      "Project management Department of economic and financial PURSAT. Reanalysis and system reconstruction feature. The system is used internally to manage Human resources, Documents, Letter (in and out), Events and Finances of other state entities.  Released in 01/01/2026.",
+    isCompleted: true,
+    chip: "completed",
+  },
+  {
+    title: "Department of culture and fine art PURSAT",
+    timeline: "01/03/2026",
+    description:
+      "Bachelor's Thesis project. Under analysis data and feature. The system is used internally to manage Human resources, Letter (in and out), Events and Finances.",
+    isCompleted: true,
+    chip: "completed",
+  },
+]);
+
 const clickToLink = (link) => {
   if (!link) return false;
   const a = document.createElement("a");
@@ -248,6 +298,26 @@ const clickToLink = (link) => {
               :rounded="tag.rounded"
               :icon="tag.icon"
               @click.prevent="clickToLink(tag.link)"
+            />
+          </template>
+        </div>
+
+        <div style="font-size: 40px; font-weight: bold">Experiences</div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 10px 0px;
+          "
+        >
+          <template v-for="exp in experiences">
+            <CardExperience
+              :title="exp.title"
+              :timeline="exp.timeline"
+              :description="exp.description"
+              :is-completed="exp.isCompleted"
+              :chip="exp.chip"
             />
           </template>
         </div>
