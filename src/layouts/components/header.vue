@@ -4,8 +4,8 @@ import toast from '@/plugins/toast';
 
 const onClick = () => {
     toast.fire({
-        title:"No resume",
-        icon:"error"
+        title:"I Love you 😘",
+        icon:"success"
     })
 }
 
