@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import ButtonNav from '@/components/buttonNav.vue';
+import toast from '@/plugins/toast';
+
+const onClick = () => {
+    toast.fire({
+        title:"No resume",
+        icon:"error"
+    })
+}
 
 </script>
 
@@ -10,7 +18,7 @@ import ButtonNav from '@/components/buttonNav.vue';
                 MEETDAVID
             </div>
             <div>
-                <ButtonNav title="Resume" />
+                <ButtonNav title="Resume" @click.prevent="onClick" />
             </div>
         </div>
     </div>
