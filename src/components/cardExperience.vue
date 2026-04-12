@@ -29,9 +29,9 @@ const props = defineProps({
 
 <template>
   <div
+    id="card"
     style="
       padding: 10px;
-      width: 100%;
       border-left: 3px;
       border-right: 0;
       border-top: 0;
@@ -39,7 +39,6 @@ const props = defineProps({
       border-color: black;
       border-style: solid;
       background-color: rgba(235, 241, 255, 0.3);
-      width: 95%;
     "
     :style="[
       {
@@ -83,3 +82,16 @@ const props = defineProps({
     </div>
   </div>
 </template>
+
+<style scoped>
+#card{
+  width: 95%;
+}
+
+/* 1000px or down */
+@media screen and (max-width: 1024px) {
+  #card{
+    width: 100%;
+  };
+}
+</style>

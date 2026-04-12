@@ -6,6 +6,14 @@ const props = defineProps({
     }
 })
 
+const emit = defineEmits([
+    "onClick"
+])
+
+const onClick = (parameter) => {
+    emit("onClick", parameter)
+}
+
 </script>
 <template>
     <button class="button">
@@ -13,7 +21,7 @@ const props = defineProps({
     </button>
 </template>
 
-<style scoped>/* From Uiverse.io by pipic1 */ 
+<style scoped>
 .button {
   --key-text-color: #969faf;
   --docsearch-key-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff,

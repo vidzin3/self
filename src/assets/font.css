@@ -4,6 +4,12 @@
   unicode-range: U+0000-007F, U+0100-024F; /* English, symbols, etc. */
 }
 
+@font-face {
+  font-family: "MixedFont";
+  src: url("./fonts/Dangrek.ttf") format("truetype");
+  unicode-range: U+1780-17FF;
+}
+
 .fontMixed{
   font-family: "MixedFont" !important;
   font-size: clamp(12px,1vw,15px);

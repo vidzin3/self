@@ -194,7 +194,7 @@ const experiences = ref([
   {
     title: "E-Clinic",
     timeline: "18/12/2023",
-    description: "Training project",
+    description: "Training real world project",
     isCompleted: false,
     chip: "NoFund",
   },
