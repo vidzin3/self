@@ -234,8 +234,8 @@ const experiences = ref([
     timeline: "01/03/2026",
     description:
       "Bachelor's Thesis project. Under analysis data and feature. The system is used internally to manage Human resources, Letter (in and out), Events and Finances.",
-    isCompleted: true,
-    chip: "completed",
+    isCompleted: false,
+    chip: "Underdevelopment",
   },
 ]);
 
