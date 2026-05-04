@@ -195,8 +195,8 @@ const experiences = ref([
     title: "E-Clinic",
     timeline: "18/12/2023",
     description: "Training real world project",
-    isCompleted: false,
-    chip: "NoFund",
+    isCompleted: true,
+    chip: "completed",
   },
   {
     title: "មន្ទីរពហុព្យាបាល និង សម្ភព សុខភីរម្យ",
