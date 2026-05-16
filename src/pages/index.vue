@@ -10,7 +10,7 @@ const aboutTags = ref([
     rounded: "md",
   },
   {
-    title: "3 Project Completed",
+    title: "4 Project Completed",
     rounded: "md",
   },
   {
@@ -194,7 +194,7 @@ const experiences = ref([
   {
     title: "E-Clinic",
     timeline: "18/12/2023",
-    description: "Training real world project",
+    description: "Training real world project (dotnet WebApi)",
     isCompleted: true,
     chip: "completed",
   },
@@ -204,6 +204,13 @@ const experiences = ref([
     description: "Team project",
     isCompleted: false,
     chip: "late",
+  },
+  {
+    title: "Restaurant Management",
+    timeline: "06/01/2024",
+    description: "Team project (dotnet WebApi)",
+    isCompleted: true,
+    chip: "completed",
   },
   {
     title: "Freelancer",

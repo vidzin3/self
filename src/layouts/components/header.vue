@@ -18,7 +18,7 @@ const onClick = () => {
                 MEETDAVID
             </div>
             <div>
-                <ButtonNav title="Resume" @click.prevent="onClick" />
+                <!-- <ButtonNav title="Resume" @click.prevent="onClick" /> -->
             </div>
         </div>
     </div>
