@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue';
 import Tag from './tag.vue';
 
 const props = defineProps({
@@ -15,11 +16,21 @@ const props = defineProps({
         default:[
             {
                 title:"",
-                icon:""
+                icon:"",
+                color: "",
+                textColor: "black",
             }
         ]
     }
 })
+
+const stackColorStatus = (color) => {
+    if(color != null && color != '' && typeof color != 'undefined'){
+        return true
+    }
+
+    return false;
+}
 </script>
 <template>
     <div
@@ -40,10 +51,17 @@ const props = defineProps({
                 {{ title }}
             </div>
         </div>
-        <div style="margin: 10px 0px">
+        <div style="margin: 10px 0px 0px 0px">
             <div style="display: flex;flex-wrap: wrap;gap: 7px;">
                 <template v-for="stack in stacks">
-                    <Tag :title="stack.title" rounded="pill" :icon="stack.icon" />
+                    <Tag 
+                        :title="stack.title" 
+                        rounded="pill" 
+                        :icon="stack.icon" 
+                        :style="[ 
+                            stackColorStatus(stack.color) || stac ? `background-color: ${stack.color}; color: ${stack.textColor}` : '' 
+                        ]"
+                    />
                 </template>
             </div>
         </div>

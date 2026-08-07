@@ -68,6 +68,7 @@ const props = defineProps({
           align-items: center;
           border-radius: 500px;
           justify-content: center;
+          white-space: nowrap;
         "
         :style="[
           {

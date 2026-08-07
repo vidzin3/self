@@ -10,11 +10,11 @@ const aboutTags = ref([
     rounded: "md",
   },
   {
-    title: "4 Project Completed",
+    title: "7 Project Completed",
     rounded: "md",
   },
   {
-    title: "5+ Clients",
+    title: "6+ Clients",
     rounded: "md",
   },
 ]);
@@ -54,37 +54,43 @@ const techStacks = ref([
       {
         title: "html",
         icon: "mdi:language-html5",
-        color: "",
+        color: "#E65100",
+        textColor: 'white'
       },
       {
         title: "css",
         icon: "mdi:language-css3",
-        color: "",
+        color: "#039BE5",
+        textColor: 'white'
       },
       {
         title: "javascript",
         icon: "mdi:language-javascript",
-        color: "",
+        color: "#FFD600",
       },
       {
         title: "tailwind",
         icon: "mdi:tailwind",
-        color: "",
+        color: "#00B0FF",
+        textColor: 'white'
       },
       {
         title: "vuetify",
         icon: "mdi:vuetify",
-        color: "",
+        color: "#00B0FF",
+        textColor: 'white'
       },
       {
         title: "vue js",
         icon: "mdi:vuejs",
-        color: "",
+        color: "#42b883",
+        textColor: 'white'
       },
       {
         title: "axios",
-        icon: "",
-        color: "",
+        icon: "mdi:api",
+        color: "#651FFF",
+        textColor: 'white'
       },
     ],
   },
@@ -95,17 +101,20 @@ const techStacks = ref([
       {
         title: "php",
         icon: "mdi:language-php",
-        color: "",
+        color: "#787CB5",
+        textColor: 'white'
       },
       {
         title: "laravel",
         icon: "mdi:laravel",
-        color: "",
+        color: "#F05340",
+        textColor: "white",
       },
       {
         title: "dotnet core web api",
-        icon: "",
-        color: "",
+        icon: "mdi:dot-net",
+        color: "#304FFE",
+        textColor: "white"
       },
     ],
   },
@@ -116,17 +125,20 @@ const techStacks = ref([
       {
         title: "c++",
         icon: "mdi:language-cpp",
-        color: "",
+        color: "#659AD2",
+        textColor: "white"
       },
       {
         title: "c#",
         icon: "mdi:language-csharp",
-        color: "",
+        color: "#9179E4",
+        textColor: "white"
       },
       {
         title: "java",
         icon: "mdi:language-java",
-        color: "",
+        color: "#007396",
+        textColor: "white"
       },
     ],
   },
@@ -136,13 +148,15 @@ const techStacks = ref([
     stacks: [
       {
         title: "mysql",
-        icon: "",
-        color: "",
+        icon: "mdi:database",
+        color: "#00758F",
+        textColor: "white"
       },
       {
         title: "postgresql",
-        icon: "",
-        color: "",
+        icon: "mdi:elephant",
+        color: "#008bb9",
+        textColor: "white"
       },
     ],
   },
@@ -153,17 +167,20 @@ const techStacks = ref([
       {
         title: "github",
         icon: "mdi:github",
-        color: "",
+        color: "#101411",
+        textColor: "white"
       },
       {
         title: "gitlab",
         icon: "mdi:gitlab",
-        color: "",
+        color: "#FC6D26",
+        textColor: "white"
       },
       {
         title: "bitbucket",
         icon: "mdi:bitbucket",
-        color: "",
+        color: "#2684FF",
+        textColor: "white"
       },
     ],
   },
@@ -174,17 +191,20 @@ const techStacks = ref([
       {
         title: "ubuntu",
         icon: "mdi:ubuntu",
-        color: "",
+        color: "#E95420",
+        textColor: "white"
       },
       {
         title: "digital ocean",
         icon: "mdi:digital-ocean",
-        color: "",
+        color: "#0080FF",
+        textColor: "white"
       },
       {
         title: "apache",
         icon: "mdi:apache-kafka",
-        color: "",
+        color: "#b91c1c",
+        textColor: "white"
       },
     ],
   },
@@ -203,7 +223,7 @@ const experiences = ref([
     timeline: "06/01/2024",
     description: "Team project",
     isCompleted: false,
-    chip: "late",
+    chip: "client cancel",
   },
   {
     title: "Restaurant Management",
@@ -241,8 +261,16 @@ const experiences = ref([
     timeline: "01/03/2026",
     description:
       "Bachelor's Thesis project. Under analysis data and feature. The system is used internally to manage Human resources, Letter (in and out), Events and Finances.",
-    isCompleted: false,
-    chip: "Underdevelopment",
+    isCompleted: true,
+    chip: "completed",
+  },
+  {
+    title: "Cambodian People's Party (CPP)",
+    timeline: "10/07/2026",
+    description:
+      "Old Project that re maintenance back to controlling by Department of economic and financial PURSAT for manangement on information memeber party, voting events and reports.",
+    isCompleted: true,
+    chip: "completed",
   },
 ]);
 
@@ -287,7 +315,7 @@ const clickToLink = (link) => {
         <div>
           <span style="color: #0571f4">Bachelor's Thesis topic</span>:
           Development of an administrative management system at the Department
-          of Culture and Fine Arts of Pursat Province <br />(Under development)
+          of Culture and Fine Arts of Pursat Province <br />
         </div>
         <div
           style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap"
