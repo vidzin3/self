@@ -298,7 +298,7 @@ const clickToLink = (link) => {
           Full-stack Web Developer with over 3 years of experience building
           scalable web applications. My journey started with a fascination for
           how data moves across the internet, leading me to engineering
-          lifecycle. It's was my dream that i have help goverment to building system management.
+          lifecycle. It's also a disire of mine to use this my skill to help that nation in government.
         </div>
         <div>
           I specialize in bridging the gap between complex backend systems and
