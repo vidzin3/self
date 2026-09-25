@@ -2,6 +2,7 @@
 import CardExperience from "@/components/cardExperience.vue";
 import CardTech from "@/components/cardTech.vue";
 import Tag from "@/components/tag.vue";
+import router from "@/plugins/router";
 import { ref } from "vue";
 
 const aboutTags = ref([
@@ -284,6 +285,10 @@ const clickToLink = (link) => {
 
   document.body.removeChild(a);
 };
+
+const goToWatchRoute = () => {
+  return router.push({name: 'watch'});
+}
 </script>
 <template>
   <div style="width: 100%; height: 100%">
@@ -316,6 +321,9 @@ const clickToLink = (link) => {
           <span style="color: #0571f4">Bachelor's Thesis topic</span>:
           Development of an administrative management system at the Department
           of Culture and Fine Arts of Pursat Province <br />
+        </div>
+        <div>
+          watch i build on my own hand <span style="color: oklch(57.7% 0.245 27.325); cursor: pointer;" @click.prevent="goToWatchRoute">collection</span>
         </div>
         <div
           style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap"

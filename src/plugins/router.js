@@ -24,6 +24,11 @@ const pages = [
                         path:'/about',
                         name:'about',
                         component:() => import('@/pages/about.vue')
+                    },
+                    {
+                        path: '/watch',
+                        name: 'watch',
+                        component: () => import('@/pages/watch.vue')
                     }
                 ]
             }
