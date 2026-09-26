@@ -1,27 +1,43 @@
 <script setup>
-import { ref } from 'vue';
-import cover_image from '@/assets/images/watchs/w1/cover.jpg';
-import hand_one_image from '@/assets/images/watchs/w1/hand_one.jpg';
-import hand_two_image from '@/assets/images/watchs/w1/hand_two.jpg';
-import overview_image from '@/assets/images/watchs/w1/overview.jpg';
+import { ref } from "vue";
+import cover_image from "@/assets/images/watchs/w1/cover.jpg";
+import hand_one_image from "@/assets/images/watchs/w1/hand_one.jpg";
+import hand_two_image from "@/assets/images/watchs/w1/hand_two.jpg";
+import overview_image from "@/assets/images/watchs/w1/overview.jpg";
+import router from "@/plugins/router";
 
 const selected_image = ref(0);
-const watch_images = ref([
-    overview_image,
-    hand_one_image,
-    hand_two_image
-]);
+const watch_images = ref([overview_image, hand_one_image, hand_two_image]);
 
-const taobao_logo = ref("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAACOElEQVR4Aa2SA68eURCGt/0hVYw2asO6YY3oRo1q27Zt27Zt27YRlTt92pk9s5u63cmbL3NmZ57BvZEsK5y7IlmYvyJZkL8imZe/Ipmb1WyTP2f68w/lFKufFsmaejimjQ1layuCiva4y8uDsp9nFZVP70VtSRUZG8nbh/bkE09+ablngBwaKYh+RKY4QcVoifhGdrBT82VpNfNBX97k/bC0//CMogMKlisz6cxS8uSKpI3n4clCJzKZGq2q7z3GOsc9Sx3xLRVnWw8fU+3m3niw4Sx5dMRC+pH8wLUky9gxjDWplHk1kiMs9XG29CWe0bTSBD1ztKFSxIklwppwhc4Xd8W9Iz/Id0Ym0LCHjAjQ0YkIManai3twIdpZd0+URQUBRSYzIubwkjvHKFEULBdRfg10aA5QBmEv4mkoT3AozOH7jUAOdS4SjN1xfm20X9vDob0NAuI7TaigK8c9magWkukFoRjTCKvIuHKyrr+v31sJ30O7RhyUnHhESTm1Dkd97WTPJhEIwRY3zUB7BmjvlDpaNty4dcQF/IgMFaBdk7vzu6ijBkkmrpw0sVCgkEoDLhD+GcLUHlHjCImTgjIz6pzMiL19GLf/GiQJX9wMR0sugEPXMAenIF9pVJpCT87EmBqEzt8ECjX8fYiAg0WEp5dwrraOco8jxgPLMC93YHAL4nR0aVyyRolmOpSHqyNoK/5entO9GGPqsPjfl/D+e3HxtibW+j6BjPxFt/zFEfOXHiVnfQEbm98sQWI+2wAAAABJRU5ErkJggg==");
+const taobao_logo = ref(
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAACOElEQVR4Aa2SA68eURCGt/0hVYw2asO6YY3oRo1q27Zt27Zt27YRlTt92pk9s5u63cmbL3NmZ57BvZEsK5y7IlmYvyJZkL8imZe/Ipmb1WyTP2f68w/lFKufFsmaejimjQ1layuCiva4y8uDsp9nFZVP70VtSRUZG8nbh/bkE09+ablngBwaKYh+RKY4QcVoifhGdrBT82VpNfNBX97k/bC0//CMogMKlisz6cxS8uSKpI3n4clCJzKZGq2q7z3GOsc9Sx3xLRVnWw8fU+3m3niw4Sx5dMRC+pH8wLUky9gxjDWplHk1kiMs9XG29CWe0bTSBD1ztKFSxIklwppwhc4Xd8W9Iz/Id0Ym0LCHjAjQ0YkIManai3twIdpZd0+URQUBRSYzIubwkjvHKFEULBdRfg10aA5QBmEv4mkoT3AozOH7jUAOdS4SjN1xfm20X9vDob0NAuI7TaigK8c9magWkukFoRjTCKvIuHKyrr+v31sJ30O7RhyUnHhESTm1Dkd97WTPJhEIwRY3zUB7BmjvlDpaNty4dcQF/IgMFaBdk7vzu6ijBkkmrpw0sVCgkEoDLhD+GcLUHlHjCImTgjIz6pzMiL19GLf/GiQJX9wMR0sugEPXMAenIF9pVJpCT87EmBqEzt8ECjX8fYiAg0WEp5dwrraOco8jxgPLMC93YHAL4nR0aVyyRolmOpSHqyNoK/5entO9GGPqsPjfl/D+e3HxtibW+j6BjPxFt/zFEfOXHiVnfQEbm98sQWI+2wAAAABJRU5ErkJggg==",
+);
+
+const onRouteBack = () => {
+  return router.push({ name: "home" });
+};
 </script>
 
 <template>
+  <div style="padding: 20px 40px 0px 40px">
+    <button class="button-7" role="button" @click="onRouteBack">
+      <svg style="width: 15px; height: 15px; fill: white; padding-top: 2px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 544 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-434.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"
+        />
+      </svg>
+    </button>
+  </div>
   <div class="watch-card">
     <div class="image-section">
       <div class="primary-image">
-        <img :src="watch_images[selected_image]" alt="Watch detail">
+        <img
+          :src="watch_images[selected_image]"
+          loading="lazy"
+          alt="Watch detail"
+        />
       </div>
-      
+
       <div class="thumbnail-nav">
         <button
           v-for="(image, index) in watch_images"
@@ -30,7 +46,7 @@ const taobao_logo = ref("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcC
           @click="selected_image = index"
           :aria-label="`View image ${index + 1}`"
         >
-          <img :src="image" :alt="`Watch view ${index + 1}`">
+          <img :src="image" loading="lazy" :alt="`Watch view ${index + 1}`" />
         </button>
       </div>
     </div>
@@ -42,11 +58,12 @@ const taobao_logo = ref("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcC
       </div>
 
       <p class="description">
-        This watch draws inspiration from the classic Rolex Oyster Perpetual aesthetic, combining Swiss precision with contemporary elegance.
-        This watch i build from combinding part by part that i bought all parts from 
+        This watch draws inspiration from the classic Rolex Oyster Perpetual
+        aesthetic, combining Swiss precision with contemporary elegance. This
+        watch i build from combinding part by part that i bought all parts from
         <span>
-            <img :src="taobao_logo" alt="taobao logo" width="15"> taobao
-        </span>  
+          <img :src="taobao_logo" alt="taobao logo" width="15" /> taobao
+        </span>
         including the movement (2813 chinese movement).
       </p>
 
@@ -90,7 +107,7 @@ const taobao_logo = ref("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcC
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
-  padding: 40px;
+  padding: 20px 40px;
   background: var(--color-bg);
   border-radius: 2px;
   max-width: 1000px;
@@ -229,6 +246,48 @@ const taobao_logo = ref("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcC
   font-size: 15px;
   color: var(--color-dark);
   font-weight: 500;
+}
+
+/* back button */
+.button-7 {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family:
+    -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-7:hover,
+.button-7:focus {
+  background-color: #07c;
+}
+
+.button-7:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.button-7:active {
+  background-color: #0064bd;
+  box-shadow: none;
 }
 
 /* Responsive Design */
