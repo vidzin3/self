@@ -5,30 +5,76 @@ import hand_one_image from "@/assets/images/watchs/w1/hand_one.jpg";
 import hand_two_image from "@/assets/images/watchs/w1/hand_two.jpg";
 import overview_image from "@/assets/images/watchs/w1/overview.jpg";
 import router from "@/plugins/router";
+import WatchCard from "@/components/watchCard.vue";
 
 const selected_image = ref(0);
 const watch_images = ref([overview_image, hand_one_image, hand_two_image]);
 
-const taobao_logo = ref(
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAACOElEQVR4Aa2SA68eURCGt/0hVYw2asO6YY3oRo1q27Zt27Zt27YRlTt92pk9s5u63cmbL3NmZ57BvZEsK5y7IlmYvyJZkL8imZe/Ipmb1WyTP2f68w/lFKufFsmaejimjQ1layuCiva4y8uDsp9nFZVP70VtSRUZG8nbh/bkE09+ablngBwaKYh+RKY4QcVoifhGdrBT82VpNfNBX97k/bC0//CMogMKlisz6cxS8uSKpI3n4clCJzKZGq2q7z3GOsc9Sx3xLRVnWw8fU+3m3niw4Sx5dMRC+pH8wLUky9gxjDWplHk1kiMs9XG29CWe0bTSBD1ztKFSxIklwppwhc4Xd8W9Iz/Id0Ym0LCHjAjQ0YkIManai3twIdpZd0+URQUBRSYzIubwkjvHKFEULBdRfg10aA5QBmEv4mkoT3AozOH7jUAOdS4SjN1xfm20X9vDob0NAuI7TaigK8c9magWkukFoRjTCKvIuHKyrr+v31sJ30O7RhyUnHhESTm1Dkd97WTPJhEIwRY3zUB7BmjvlDpaNty4dcQF/IgMFaBdk7vzu6ijBkkmrpw0sVCgkEoDLhD+GcLUHlHjCImTgjIz6pzMiL19GLf/GiQJX9wMR0sugEPXMAenIF9pVJpCT87EmBqEzt8ECjX8fYiAg0WEp5dwrraOco8jxgPLMC93YHAL4nR0aVyyRolmOpSHqyNoK/5entO9GGPqsPjfl/D+e3HxtibW+j6BjPxFt/zFEfOXHiVnfQEbm98sQWI+2wAAAABJRU5ErkJggg==",
-);
+const taobao_logo = ref("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAACOElEQVR4Aa2SA68eURCGt/0hVYw2asO6YY3oRo1q27Zt27Zt27YRlTt92pk9s5u63cmbL3NmZ57BvZEsK5y7IlmYvyJZkL8imZe/Ipmb1WyTP2f68w/lFKufFsmaejimjQ1layuCiva4y8uDsp9nFZVP70VtSRUZG8nbh/bkE09+ablngBwaKYh+RKY4QcVoifhGdrBT82VpNfNBX97k/bC0//CMogMKlisz6cxS8uSKpI3n4clCJzKZGq2q7z3GOsc9Sx3xLRVnWw8fU+3m3niw4Sx5dMRC+pH8wLUky9gxjDWplHk1kiMs9XG29CWe0bTSBD1ztKFSxIklwppwhc4Xd8W9Iz/Id0Ym0LCHjAjQ0YkIManai3twIdpZd0+URQUBRSYzIubwkjvHKFEULBdRfg10aA5QBmEv4mkoT3AozOH7jUAOdS4SjN1xfm20X9vDob0NAuI7TaigK8c9magWkukFoRjTCKvIuHKyrr+v31sJ30O7RhyUnHhESTm1Dkd97WTPJhEIwRY3zUB7BmjvlDpaNty4dcQF/IgMFaBdk7vzu6ijBkkmrpw0sVCgkEoDLhD+GcLUHlHjCImTgjIz6pzMiL19GLf/GiQJX9wMR0sugEPXMAenIF9pVJpCT87EmBqEzt8ECjX8fYiAg0WEp5dwrraOco8jxgPLMC93YHAL4nR0aVyyRolmOpSHqyNoK/5entO9GGPqsPjfl/D+e3HxtibW+j6BjPxFt/zFEfOXHiVnfQEbm98sQWI+2wAAAABJRU5ErkJggg==");
 
 const onRouteBack = () => {
   return router.push({ name: "home" });
 };
+
+const watch_datas = ref([
+  {
+    thumbnails: watch_images,
+    title: "Oyster Perpetual",
+    subtitle: "A timeless design, reimagined",
+    description: `
+      This watch draws inspiration from the classic Rolex Oyster Perpetual
+      aesthetic, combining Swiss precision with contemporary elegance. This
+      watch i build from combinding part by part that i bought all parts from
+      <span>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAACOElEQVR4Aa2SA68eURCGt/0hVYw2asO6YY3oRo1q27Zt27Zt27YRlTt92pk9s5u63cmbL3NmZ57BvZEsK5y7IlmYvyJZkL8imZe/Ipmb1WyTP2f68w/lFKufFsmaejimjQ1layuCiva4y8uDsp9nFZVP70VtSRUZG8nbh/bkE09+ablngBwaKYh+RKY4QcVoifhGdrBT82VpNfNBX97k/bC0//CMogMKlisz6cxS8uSKpI3n4clCJzKZGq2q7z3GOsc9Sx3xLRVnWw8fU+3m3niw4Sx5dMRC+pH8wLUky9gxjDWplHk1kiMs9XG29CWe0bTSBD1ztKFSxIklwppwhc4Xd8W9Iz/Id0Ym0LCHjAjQ0YkIManai3twIdpZd0+URQUBRSYzIubwkjvHKFEULBdRfg10aA5QBmEv4mkoT3AozOH7jUAOdS4SjN1xfm20X9vDob0NAuI7TaigK8c9magWkukFoRjTCKvIuHKyrr+v31sJ30O7RhyUnHhESTm1Dkd97WTPJhEIwRY3zUB7BmjvlDpaNty4dcQF/IgMFaBdk7vzu6ijBkkmrpw0sVCgkEoDLhD+GcLUHlHjCImTgjIz6pzMiL19GLf/GiQJX9wMR0sugEPXMAenIF9pVJpCT87EmBqEzt8ECjX8fYiAg0WEp5dwrraOco8jxgPLMC93YHAL4nR0aVyyRolmOpSHqyNoK/5entO9GGPqsPjfl/D+e3HxtibW+j6BjPxFt/zFEfOXHiVnfQEbm98sQWI+2wAAAABJRU5ErkJggg==" alt="taobao logo" width="15" /> taobao
+      </span>
+      including the movement (2813 chinese movement).
+    `,
+    features: [
+      {
+        feature: [
+          {
+            label: "Movement",
+            description: "Automatic",
+          },
+          {
+            label: "Case",
+            description: "Stainless Steel (316L)",
+          },
+          {
+            label: "Water Resistance",
+            description: "3ATM (30m)",
+          },
+        ],
+      },
+      {
+        feature: [
+          {
+            label: "Total Cost",
+            description: "54.7$",
+          },
+        ],
+      },
+    ],
+  },
+]);
 </script>
 
 <template>
   <div style="padding: 20px 40px 0px 40px">
     <button class="button-7" role="button" @click="onRouteBack">
-      <svg style="width: 15px; height: 15px; fill: white; padding-top: 2px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+      <svg
+        style="width: 15px; height: 15px; fill: white; padding-top: 2px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 576 512"
+      >
         <path
           d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 544 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-434.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"
         />
       </svg>
     </button>
   </div>
-  <div class="watch-card">
+  <!-- <div class="watch-card">
     <div class="image-section">
       <div class="primary-image">
         <img
@@ -78,7 +124,7 @@ const onRouteBack = () => {
         </div>
         <div class="feature">
           <span class="feature-label">Water Resistance</span>
-          <span class="feature-value">100m</span>
+          <span class="feature-value">30m</span>
         </div>
       </div>
 
@@ -89,7 +135,16 @@ const onRouteBack = () => {
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+  <template v-for="watch_data in watch_datas">
+    <WatchCard
+      :thumbnails="watch_data.thumbnails"
+      :title="watch_data.title"
+      :subtitle="watch_data.subtitle"
+      :description="watch_data.description"
+      :features="watch_data.features"
+    />
+  </template>
 </template>
 
 <style scoped>
