@@ -35,7 +35,7 @@ const watch_datas = ref([
         feature: [
           {
             label: "Movement",
-            description: "Automatic",
+            description: "2813 Automatic",
           },
           {
             label: "Case",
