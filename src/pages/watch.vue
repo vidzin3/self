@@ -10,8 +10,6 @@ import WatchCard from "@/components/watchCard.vue";
 const selected_image = ref(0);
 const watch_images = ref([overview_image, hand_one_image, hand_two_image]);
 
-const taobao_logo = ref("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAACOElEQVR4Aa2SA68eURCGt/0hVYw2asO6YY3oRo1q27Zt27Zt27YRlTt92pk9s5u63cmbL3NmZ57BvZEsK5y7IlmYvyJZkL8imZe/Ipmb1WyTP2f68w/lFKufFsmaejimjQ1layuCiva4y8uDsp9nFZVP70VtSRUZG8nbh/bkE09+ablngBwaKYh+RKY4QcVoifhGdrBT82VpNfNBX97k/bC0//CMogMKlisz6cxS8uSKpI3n4clCJzKZGq2q7z3GOsc9Sx3xLRVnWw8fU+3m3niw4Sx5dMRC+pH8wLUky9gxjDWplHk1kiMs9XG29CWe0bTSBD1ztKFSxIklwppwhc4Xd8W9Iz/Id0Ym0LCHjAjQ0YkIManai3twIdpZd0+URQUBRSYzIubwkjvHKFEULBdRfg10aA5QBmEv4mkoT3AozOH7jUAOdS4SjN1xfm20X9vDob0NAuI7TaigK8c9magWkukFoRjTCKvIuHKyrr+v31sJ30O7RhyUnHhESTm1Dkd97WTPJhEIwRY3zUB7BmjvlDpaNty4dcQF/IgMFaBdk7vzu6ijBkkmrpw0sVCgkEoDLhD+GcLUHlHjCImTgjIz6pzMiL19GLf/GiQJX9wMR0sugEPXMAenIF9pVJpCT87EmBqEzt8ECjX8fYiAg0WEp5dwrraOco8jxgPLMC93YHAL4nR0aVyyRolmOpSHqyNoK/5entO9GGPqsPjfl/D+e3HxtibW+j6BjPxFt/zFEfOXHiVnfQEbm98sQWI+2wAAAABJRU5ErkJggg==");
-
 const onRouteBack = () => {
   return router.push({ name: "home" });
 };
@@ -52,6 +50,43 @@ const watch_datas = ref([
           {
             label: "Total Cost",
             description: "54.7$",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    thumbnails: [],
+    title: "Rolex Oyster Perpetual Datejust ref(16233)",
+    subtitle: "A timeless design, reimagined",
+    description: `
+      This watch draws inspiration from the classic Rolex Oyster Perpetual Datejust
+      aesthetic, combining Swiss precision with contemporary elegance. This
+      watch i build from combinding part by part that i bought all parts from taobao
+      including the movement (2813 chinese movement).
+    `,
+    features: [
+      {
+        feature: [
+          {
+            label: "Movement",
+            description: "2813 Automatic",
+          },
+          {
+            label: "Case",
+            description: "Stainless Steel (316L)",
+          },
+          {
+            label: "Water Resistance",
+            description: "3ATM (30m)",
+          },
+        ],
+      },
+      {
+        feature: [
+          {
+            label: "Total Cost",
+            description: "30$",
           },
         ],
       },
